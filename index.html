@@ -12,25 +12,29 @@
 
 <body>
     <header class="background">
-        <button id = "highscore" class="btn">View HighScores</button>
-        <p class=timer>Timer: </p>
+        <button id="highscore" class="btn">View HighScores</button>
+        <p class="timer">Timer: 90 seconds</p>
     </header>
     <div class="background">
 
         <section class="container">
-            <h2>JavaScript Quiz Game</h2>
-            <p>Welcome! Please click 'Start Quiz' button below to begin the quiz. You will begin with :90 seconds on the
+            <h2 class="game-over" id="question-text">JavaScript Quiz Game</h2>
+            <p class="question">Welcome! Please click 'Start Quiz' button below to begin the quiz. You will begin with
+                :90 seconds on the
                 clock, any wrong answers will reduce your time, while correct answers will increase your time. Your
                 final score will be displayed at the end of the quiz.</p>
-            <button class="btn" id ="start">Begin Quiz</button>
+            <div class="align">
+                <button class="btn" id="start">Begin Quiz</button>
+                <div class="hide-box">
+                    <button class="btn" id="aBtn" >A</button>
+                    <button class="btn" id="bBtn">B</button>
+                    <button class="btn" id="cBtn">C</button>
+                    <button class="btn" id="dBtn">D</button>
+                </div>
+            </div>
+
         </section>
 
-        <!--<section>
-        <button>A</button>
-        <button>B</button>
-        <button>C</button>
-        <button>D</button>
-    </section>    -->
     </div>
 
 
