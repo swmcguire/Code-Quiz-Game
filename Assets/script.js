@@ -23,13 +23,13 @@ var questionArr = [
         correct: "C. Angelic"
     },
     {
-        question: "How do you get the length of var text = \"Lets Go!",
-        answers: ["A. length.text","B. len(text)","C. text.length","D. text(len)"],
+        question: "How do you get the length of var text = \"Lets Go!\"",
+        answers: ["A. length.text","B. len(text)","C. text.length","D. tex(len)"],
         correct: "C. text.length"
     },
     {
         question: "How do you comment out in JavaScript?",
-        answers: ["A. <!--With this-->","B. *+With this+*","C. //With this","D. ----With this"],
+        answers: ["A. <!--With this-->","B. *+With this+*","C. //With this","D. --With this"],
         correct: "C. //With this"
     },
     {
@@ -39,17 +39,17 @@ var questionArr = [
     },
     {
         question: "Can you build a website with JavaScript Only?",
-        answers: ["A. Yes","B. No","C. You can try","D. Every good website is."],
+        answers: ["A. Yes","B. No","C. You can try","D. Obvi"],
         correct: "B. No"
     },
     {
         question: "Is Java and JavaScript the same thing?",
-        answers: ["A. Yes","B. No","C. If you try really hard","D. Unsure"],
+        answers: ["A. Yes","B. No","C. If you try hard","D. Unsure"],
         correct: "B. No"
     },
     {
-        question: "Which HTML element do we put JavaScript in?",
-        answers: ["A. <js>","B. <script>","C. <javaScript>","D. <h1>"],
+        question: "Which type of HTML element do we link JavaScript in?",
+        answers: ["A. js","B. script","C. javaScript","D. h1"],
         correct: "B. <script>"
     },
     {
@@ -77,11 +77,20 @@ startBtn.addEventListener('click',start);
 
 function start() {
     startTimer();
+    //hideText();
     showQuestion();
 
 }
 
-//---------------------------------TIMER FUNCTION------------------------------//
+
+//---------------------------------HIDE START AND TEXT------------------------------//
+
+/*
+function hideText () {
+    var hide = document.getElementById("hide");
+    hide.style.display=none;
+}
+*/
 
 var timerEl = document.querySelector(".timer");
 var gameOverEl = document.getElementById(".game-over");
@@ -102,11 +111,12 @@ function startTimer() {
 
 //---------------------------------DISPLAY GAME OVER IF TIMER HITS 0------------------------------//
 
+/*
 //Write GameOver on Page
 function gameOver() {
     gameOverEl.textContent = "GAME OVER!!!!!!";
   }
-
+*/
 
 //---------------------------------THIS FUNCTION STARTS THE GAME------------------------------//
 
@@ -124,7 +134,7 @@ function showQuestion(){
     cBtn.innerHTML = questionArr[currentQuestion].answers[2];
     dBtn.innerHTML = questionArr[currentQuestion].answers[3];
 }
-
+//showQuestion();
 
 
 
