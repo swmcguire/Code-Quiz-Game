@@ -128,24 +128,21 @@ function gameOver() {
 function showQuestion(){
     currentQuestion = 0;
     questionText.innerHTML = questionArr[currentQuestion].question;
-
-    console.log(questionArr[currentQuestion].answers[0]);
-    console.log(questionArr[currentQuestion].answers[1]);
-    console.log(questionArr[currentQuestion].answers[2]);
-    console.log(questionArr[currentQuestion].answers[3]);
-
     aBtn.innerHTML = questionArr[currentQuestion].answers[0];
     bBtn.innerHTML = questionArr[currentQuestion].answers[1];
     cBtn.innerHTML = questionArr[currentQuestion].answers[2];
     dBtn.innerHTML = questionArr[currentQuestion].answers[3];
 }
 
+/*when button gets clicked it compares to the answer... if the answer == then CORRECT!  
+
+if the answer !== then WRONG!
+THEN 
 
 
 
 
-
-
+*/
 
 /*
 //---------------------------------HIGH SCORE FUNCTION------------------------------//
