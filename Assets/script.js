@@ -6,6 +6,8 @@ var aBtn = document.getElementById('aBtn');
 var bBtn = document.getElementById('bBtn');
 var cBtn = document.getElementById('cBtn');
 var dBtn = document.getElementById('dBtn');
+var para = document.getElementById('para');
+var show = document.getElementById('show');
 
 
 //---------------------------------ARRAY OF QUESTIONS AND ANSWERS------------------------------//
@@ -77,7 +79,7 @@ startBtn.addEventListener('click',start);
 
 function start() {
     startTimer();
-    //hideText();
+    hideText();
     showQuestion();
 
 }
@@ -85,12 +87,15 @@ function start() {
 
 //---------------------------------HIDE START AND TEXT------------------------------//
 
-/*
+
 function hideText () {
-    var hide = document.getElementById("hide");
-    hide.style.display=none;
+    startBtn.style.display="none";
+    para.style.display="none";
+    show.style.display="inline";
+
+    
 }
-*/
+
 
 var timerEl = document.querySelector(".timer");
 var gameOverEl = document.getElementById(".game-over");
@@ -134,7 +139,7 @@ function showQuestion(){
     cBtn.innerHTML = questionArr[currentQuestion].answers[2];
     dBtn.innerHTML = questionArr[currentQuestion].answers[3];
 }
-//showQuestion();
+
 
 
 
