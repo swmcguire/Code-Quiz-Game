@@ -97,7 +97,7 @@ function hideText () {
 var timerEl = document.querySelector('.timer');
 var gameOverEl = document.getElementById('game-over');
 
-var secondsLeft = 90;
+var secondsLeft = 5;
 
 function startTimer() {
   var timerInterval = setInterval(function() {
@@ -114,12 +114,12 @@ function startTimer() {
 //---------------------------------DISPLAY GAME OVER IF TIMER HITS 0------------------------------//
 
 
-/*
+
 //Write GameOver on Page
 function gameOver() {
-    gameOverEl.textContent = "GAME OVER!!!!!!";
+    window.alert("GAME OVER!!!! " + " Score:  " + secondsLeft);
   }
-*/
+
 
 //---------------------------------THIS FUNCTION STARTS THE GAME------------------------------//
 
@@ -138,20 +138,27 @@ var quizChoice = '';
 function getAnswer (choice) { 
     //var result = document.getElementById("result");
 
-    if (quizChoice === questionArr[currentQuestion].correct[0]) {
+    if (quizChoice === questionArr[currentQuestion].correct[0]
+        && currentQuestion < 9) {
         window.alert("Correct!");
         secondsLeft+=10;
         currentQuestion ++;
         showQuestion();
-    } else {
+    } else if (quizChoice !== questionArr[currentQuestion].correct[0]
+        && currentQuestion < 9) { 
         secondsLeft-=10;
         window.alert("WRONG!!");
         currentQuestion ++;
         showQuestion();
+
+    } else if (currentQuestion === 9) {
+        gameOver();
+    }
+    else{
+        clearInterval(timerInterval);
     }
 
 } 
-
 
 aBtn.addEventListener("click", () =>{
     quizChoice = (questionArr[currentQuestion].answers[0]);
@@ -174,8 +181,6 @@ dBtn.addEventListener("click", () =>{
     getAnswer(quizChoice);
 });
 
-//---------------------------------NEXT QUESTION FUNCTION------------------------------//
-
 /*
 //---------------------------------HIGH SCORE FUNCTION------------------------------//
 
@@ -183,9 +188,4 @@ function highscore(){
     console.log("Nice...HighScore!");
 }
 
-//---------------------------------GAME OVER FUNCTION------------------------------//
-
-function endGame(){
-   console.log("End the game!");
-}
 */
