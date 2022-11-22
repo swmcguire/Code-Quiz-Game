@@ -96,15 +96,16 @@ function hideText () {
 
 var timerEl = document.querySelector('.timer');
 var gameOverEl = document.getElementById('game-over');
+var timerInterval;
 
-var secondsLeft = 5;
+var secondsLeft = 90;
 
 function startTimer() {
   var timerInterval = setInterval(function() {
     secondsLeft--;
     timerEl.textContent = "Timer:  " + secondsLeft + " seconds";
 
-    if(secondsLeft === 0) {
+    if(secondsLeft <= 0) {
       clearInterval(timerInterval);
       gameOver();
     }
@@ -112,7 +113,6 @@ function startTimer() {
 }
 
 //---------------------------------DISPLAY GAME OVER IF TIMER HITS 0------------------------------//
-
 
 
 //Write GameOver on Page
@@ -153,9 +153,10 @@ function getAnswer (choice) {
 
     } else if (currentQuestion === 9) {
         gameOver();
+        clearInterval(timerInterval);
     }
     else{
-        clearInterval(timerInterval);
+         clearInterval(timerInterval);
     }
 
 } 
