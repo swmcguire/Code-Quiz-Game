@@ -36,7 +36,7 @@ var questionArr = [
     },
     {
         question: "Which is correct to set your variable?",
-        answers: ["A. v length","B. length = var","C. var length","D. i++"],
+        answers: ["A. v length","B. length = var","C. var length;","D. i++"],
         correct: ["C. var length;"]
     },
     {
@@ -52,7 +52,7 @@ var questionArr = [
     {
         question: "Which type of HTML element do we link JavaScript in?",
         answers: ["A. js","B. script","C. javaScript","D. h1"],
-        correct: ["B. <script>"]
+        correct: ["B. script"]
     },
     {
         question: "How do you create a function in JavaScript?",
