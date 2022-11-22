@@ -58,3 +58,7 @@ body{
 .align{
     display: flex;
 }
+
+.center{
+    text-align: center;
+}

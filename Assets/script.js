@@ -84,7 +84,6 @@ function start() {
 
 }
 
-
 //---------------------------------HIDE START AND TEXT------------------------------//
 
 
@@ -114,6 +113,7 @@ function startTimer() {
 
 //---------------------------------DISPLAY GAME OVER IF TIMER HITS 0------------------------------//
 
+
 /*
 //Write GameOver on Page
 function gameOver() {
@@ -124,7 +124,7 @@ function gameOver() {
 //---------------------------------THIS FUNCTION STARTS THE GAME------------------------------//
 
 function showQuestion(){
-    currentQuestion = 0;
+    console.log(currentQuestion);
     questionText.innerHTML = questionArr[currentQuestion].question;
     aBtn.innerHTML = questionArr[currentQuestion].answers[0];
     bBtn.innerHTML = questionArr[currentQuestion].answers[1];
@@ -133,18 +133,21 @@ function showQuestion(){
 }
 
 
-
 var quizChoice = '';
 
 function getAnswer (choice) { 
     //var result = document.getElementById("result");
 
     if (quizChoice === questionArr[currentQuestion].correct[0]) {
-        console.log("Correct!");
+        window.alert("Correct!");
         secondsLeft+=10;
+        currentQuestion ++;
+        showQuestion();
     } else {
         secondsLeft-=10;
-        console.log("WRONG!!");
+        window.alert("WRONG!!");
+        currentQuestion ++;
+        showQuestion();
     }
 
 } 
@@ -171,6 +174,7 @@ dBtn.addEventListener("click", () =>{
     getAnswer(quizChoice);
 });
 
+//---------------------------------NEXT QUESTION FUNCTION------------------------------//
 
 /*
 //---------------------------------HIGH SCORE FUNCTION------------------------------//
